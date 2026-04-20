@@ -1,0 +1,400 @@
+/* =============================================
+   ESTILOS.CSS - Portfolio Personal
+   Gerardo Quiroga - 6to G - IPET 249 - 2026
+   ============================================= */
+
+/* --- RESET BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa;       /* color claro de fondo */
+  color: #1e1e2e;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =============================================
+   ESTADOS DE LOS ENLACES (requisito TP4)
+   ============================================= */
+
+/* :link - enlace no visitado */
+a:link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* :visited - enlace ya visitado */
+a:visited {
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+/* :hover - mouse encima */
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* :active - en el momento del clic */
+a:active {
+  color: #dc2626;
+}
+
+/* =============================================
+   HEADER / NAVEGACIÓN
+   ============================================= */
+
+header {
+  background-color: #1e1e2e;       /* hexadecimal oscuro */
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  border-bottom: 3px solid #2563eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo como enlace: sobreescribimos estados para el header */
+#logo-link:link,
+#logo-link:visited {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo-link:hover {
+  color: #93c5fd;  /* azul claro al hover */
+  text-decoration: none;
+}
+
+/* Imagen dentro del logo: funciona como enlace */
+#logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+  object-fit: cover;
+}
+
+/* Navegación: flexbox horizontal */
+nav {
+  display: flex;
+  gap: 4px;
+}
+
+/* Links del menú: simulación de botones */
+nav a {
+  display: inline-block;           /* display: inline-block para botón */
+  padding: 7px 16px;               /* padding para dar cuerpo al botón */
+  background-color: transparent;
+  color: #ccc;
+  text-decoration: none;           /* eliminar subrayado */
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:link,
+nav a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;           /* sin subrayado en hover del menú */
+}
+
+nav a:active {
+  background-color: #1d4ed8;
+}
+
+/* Página activa en el menú (Krug: "usted está aquí") */
+nav a.activo {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+/* =============================================
+   CONTENIDO PRINCIPAL
+   ============================================= */
+
+main {
+  max-width: 960px;
+  margin: 36px auto;
+  padding: 0 24px;
+}
+
+/* =============================================
+   CARDS / SECCIONES
+   ============================================= */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);  /* RGBA transparencia */
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  color: #1e1e2e;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #2563eb;
+}
+
+.card p {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* =============================================
+   HERO (sección de bienvenida index)
+   ============================================= */
+
+.hero {
+  background-color: #1e1e2e;
+  color: #fff;
+  border-radius: 8px;
+  padding: 48px 40px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: 1px solid #2d2d4a;
+}
+
+.hero-texto h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.hero-texto h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #93c5fd;
+  margin-bottom: 16px;
+  border: none;
+  padding: 0;
+}
+
+.hero-texto p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   BOTÓN PRINCIPAL (enlace diseñado como botón)
+   ============================================= */
+
+.btn-principal {
+  display: inline-block;           /* inline-block: requisito */
+  padding: 10px 24px;              /* padding: requisito */
+  background-color: #2563eb;      /* background-color: requisito */
+  color: #fff;
+  text-decoration: none;           /* sin subrayado: requisito */
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-principal:link,
+.btn-principal:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-principal:hover {
+  background-color: #1d4ed8;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-principal:active {
+  background-color: #1e40af;
+}
+
+.btn-secundario {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: transparent;
+  color: #2563eb;
+  text-decoration: none;
+  border: 2px solid #2563eb;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-secundario:link,
+.btn-secundario:visited {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.btn-secundario:hover {
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* =============================================
+   GRILLA DE PROYECTOS (galeria)
+   ============================================= */
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.proyecto-card {
+  background-color: #f0f4ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.proyecto-card:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+}
+
+.proyecto-card h3 {
+  font-size: 1rem;
+  color: #1e1e2e;
+  margin-bottom: 8px;
+}
+
+.proyecto-card p {
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: rgb(219, 234, 254);  /* RGB */
+  color: #1d4ed8;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* =============================================
+   SKILLS (about)
+   ============================================= */
+
+.skills-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-lista li {
+  background-color: #1e1e2e;
+  color: #93c5fd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* =============================================
+   FORMULARIO DE CONTACTO
+   ============================================= */
+
+.form-grupo {
+  margin-bottom: 16px;
+}
+
+.form-grupo label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+  background-color: #1e1e2e;
+  color: #888;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.82rem;
+  margin-top: 40px;
+}
+
+footer a:link,
+footer a:visited {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* =============================================
+   ENLACE EXTERNO (con ícono indicador)
+   ============================================= */
+
+a.externo::after {
+  content: " ↗";
+  font-size: 0.75em;
+  opacity: 0.7;
+}

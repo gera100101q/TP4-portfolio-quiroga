@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Portfolio Gerardo Quiroga</title>
+  <!-- Ruta relativa al CSS -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO GLOBAL -->
+  <header>
+    <a href="index.html" id="logo-link">
+      <img
+        src="img/yo.png"
+        alt="Logo de Gerardo Quiroga - volver al inicio"
+        title="Ir al inicio"
+        id="logo-img"
+      />
+      Gerardo Quiroga
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="galeria.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 style="font-size:1.5rem; color:#1e1e2e; margin-bottom:8px;">Contacto</h1>
+    <p style="color:#666; margin-bottom:24px;">Podés escribirme directamente o usar el formulario de abajo.</p>
+
+    <!-- DATOS DE CONTACTO -->
+    <div class="card">
+      <h2>Información de contacto</h2>
+
+      <p>
+        📧 <strong>Email:</strong>
+        <!-- Enlace mailto con asunto predefinido (requisito TP4) -->
+        <a href="mailto:gerardobenjaminquiroga2009@gmail.com?subject=Contacto%20desde%20Portfolio&body=Hola%20Gerardo%2C">
+          gerardobenjaminquiroga2009@gmail.com
+        </a>
+      </p>
+
+      <br />
+
+      <p>
+        💻 <strong>GitHub:</strong>
+        <!-- Ruta absoluta con target="_blank" -->
+        <a href="https://github.com/gera100101q" target="_blank" class="externo">
+          github.com/gera100101q
+        </a>
+      </p>
+
+      <br />
+
+      <p>
+        🏫 <strong>Institución:</strong>
+        <a href="https://www.ipet249.edu.ar" target="_blank" class="externo">
+          IPET 249 Nicolás Copérnico — Córdoba, Argentina
+        </a>
+      </p>
+
+      <br />
+
+      <p style="color:#888; font-size:0.88rem;">
+        Tiempo de respuesta habitual: menos de 48 horas.
+      </p>
+    </div>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class="card">
+      <h2>Formulario de Contacto</h2>
+
+      <form>
+
+        <div class="form-grupo">
+          <label for="nombre">Nombre completo *</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre y apellido"
+            title="Ingresá tu nombre completo"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+            title="Ingresá tu dirección de email"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="asunto">Asunto</label>
+          <input
+            type="text"
+            id="asunto"
+            name="asunto"
+            placeholder="¿Sobre qué querés escribirme?"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="mensaje">Mensaje *</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Escribí tu mensaje acá..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-principal" style="border:none; cursor:pointer;">
+          Enviar mensaje
+        </button>
+
+      </form>
+    </div>
+
+    <!-- VOLVER AL INICIO -->
+    <div style="text-align:center; margin-bottom:28px;">
+      <a href="index.html" class="btn-secundario">← Volver al inicio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      Gerardo Quiroga &mdash; 6to G &mdash; IPET 249 Nicolás Copérnico &mdash; 2026
+      &nbsp;|&nbsp;
+      <a href="https://github.com/gera100101q" target="_blank" class="externo">GitHub</a>
+      &nbsp;|&nbsp;
+      <a href="mailto:gerardobenjaminquiroga2009@gmail.com">gerardobenjaminquiroga2009@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>

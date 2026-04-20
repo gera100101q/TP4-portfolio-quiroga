@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Portfolio Gerardo Quiroga</title>
+  <!-- Ruta relativa al CSS externo -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO GLOBAL: igual en todas las páginas -->
+  <header>
+    <!-- Imagen como enlace al inicio (requisito TP4) -->
+    <a href="index.html" id="logo-link">
+      <img
+        src="img/yo.png"
+        alt="Logo de Gerardo Quiroga - volver al inicio"
+        title="Ir al inicio"
+        id="logo-img"
+      />
+      Gerardo Quiroga
+    </a>
+
+    <!-- Menú global de navegación (rutas relativas) -->
+    <nav>
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="galeria.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN HERO -->
+    <div class="hero">
+      <div class="hero-texto">
+        <h1>Gerardo Quiroga</h1>
+        <h2>Estudiante de Programación — IPET 249 Nicolás Copérnico</h2>
+        <p>
+          Bienvenido a mi portfolio. Acá vas a encontrar mis proyectos,
+          habilidades y formas de contactarme.
+        </p>
+        <!-- Enlace diseñado como botón (requisito CSS TP4) -->
+        <a href="galeria.html" class="btn-principal">Ver mis proyectos</a>
+        &nbsp;
+        <a href="contacto.html" class="btn-secundario">Contactarme</a>
+      </div>
+
+      <!-- Imagen local con alt y title -->
+      <img
+        src="img/yo.png"
+        alt="Foto de perfil de Gerardo Quiroga"
+        title="Gerardo Quiroga - Desarrollador web en formación"
+        class="hero-img"
+        width="120"
+        height="120"
+      />
+    </div>
+
+    <!-- RESUMEN DE SECCIONES -->
+    <div class="card">
+      <h2>¿Qué encontrás en este portfolio?</h2>
+      <p>
+        Este sitio está organizado en cuatro secciones.
+        Usá el menú de arriba para navegar entre ellas:
+      </p>
+
+      <!-- Lista con rutas relativas internas -->
+      <ul style="margin: 12px 0 0 20px; color: #444; line-height: 2;">
+        <li><a href="galeria.html">🗂 Proyectos</a> — Trabajos prácticos desarrollados durante el año.</li>
+        <li><a href="about.html">👤 Sobre mí</a> — Mi perfil, habilidades y trayectoria.</li>
+        <li><a href="contacto.html">✉ Contacto</a> — Formulario y formas de comunicarse.</li>
+      </ul>
+    </div>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <div class="card">
+      <h2>Proyectos Destacados</h2>
+
+      <div class="grid-proyectos">
+
+        <div class="proyecto-card">
+          <h3>TP3 — Sistema de Gestión de Stock</h3>
+          <p>Sitio web estático con HTML y CSS para un comercio multirubro. Incluye tablas, formularios y layout con Flexbox y Grid.</p>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <br /><br />
+          <!-- Ruta absoluta: enlace externo con target="_blank" -->
+          <a href="https://github.com/gera100101q" target="_blank" class="externo">Ver en GitHub</a>
+        </div>
+
+        <div class="proyecto-card">
+          <h3>TP2 — Catálogo New Era Argentina</h3>
+          <p>Sitio temático con catálogo de gorras New Era, precios en pesos argentinos y múltiples páginas enlazadas.</p>
+          <span class="tag">HTML5</span>
+          <span class="tag">Imágenes</span>
+          <br /><br />
+          <a href="https://github.com/gera100101q" target="_blank" class="externo">Ver en GitHub</a>
+        </div>
+
+        <div class="proyecto-card">
+          <h3>TP Diagnóstico — Python OOP</h3>
+          <p>Programa en Python con clase <code>Estudiante</code>, validación de datos y simulación de login con roles.</p>
+          <span class="tag">Python</span>
+          <span class="tag">POO</span>
+          <br /><br />
+          <a href="https://github.com/gera100101q" target="_blank" class="externo">Ver en GitHub</a>
+        </div>
+
+        <div class="proyecto-card">
+          <h3>TP1 — Portfolio con GitHub Pages</h3>
+          <p>Primer portfolio publicado con GitHub Pages. Estructura semántica HTML5 y estilos CSS básicos.</p>
+          <span class="tag">HTML5</span>
+          <span class="tag">GitHub Pages</span>
+          <br /><br />
+          <a href="https://github.com/gera100101q" target="_blank" class="externo">Ver en GitHub</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PIE DE PÁGINA GLOBAL -->
+  <footer>
+    <p>
+      Gerardo Quiroga &mdash; 6to G &mdash; IPET 249 Nicolás Copérnico &mdash; 2026
+      &nbsp;|&nbsp;
+      <a href="https://github.com/gera100101q" target="_blank" class="externo">GitHub</a>
+      &nbsp;|&nbsp;
+      <a href="mailto:gerardobenjaminquiroga2009@gmail.com">gerardobenjaminquiroga2009@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
